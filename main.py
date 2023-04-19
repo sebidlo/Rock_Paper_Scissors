@@ -1,23 +1,20 @@
-import curses
 
-def main(stdscr):
-    # Ustawiamy kursor konsoli na ukryty
-    curses.curs_set(0)
-    # Ustawiamy nieblokujący tryb klawiatury
-    stdscr.nodelay(True)
+def schow_key(key):
+    print(f"nacisnieto a ....{key}")
+    
+def read_key() -> int:
+    key_1 = int(input("wybież wartiant"))
+    return key_1
+
+
+def main():
     while True:
-        # Pobieramy kod znaku naciśniętego przez użytkownika
-        key = stdscr.getch()
-        print(key)
-        if key != curses.ERR:
-            # obsługa klawiszy
-            if key == ord('a'):
-                stdscr.addstr(0, 0, "Klawisz 'a' został naciśnięty.")
-            elif key == ord('b'):
-                stdscr.addstr(0, 0, "Klawisz 'b' został naciśnięty.")
-            elif key == ord('q'):
-                break # quit game
-        stdscr.refresh()
+        key = read_key()
+        if key == 1:
+            print("ok 1")
+        else:
+            print("inny")
+        
 
-# Inicjujemy konsolę
-curses.wrapper(main)
+if __name__ == "__main__":
+    main()
