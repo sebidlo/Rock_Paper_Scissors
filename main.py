@@ -21,10 +21,12 @@ def main():
     while True:
         key = read_key()
         if key == 1:
+            schow_key(key)
             print("ok 1")
             clear()
         else:
             print("inny")
+            # clear()
         
 if __name__ == "__main__":
     main()
