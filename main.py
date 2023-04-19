@@ -15,6 +15,8 @@ def main(stdscr):
                 stdscr.addstr(0, 0, "Klawisz 'a' został naciśnięty.")
             elif key == ord('b'):
                 stdscr.addstr(0, 0, "Klawisz 'b' został naciśnięty.")
+            elif key == ord('q'):
+                break # quit game
         stdscr.refresh()
 
 # Inicjujemy konsolę
