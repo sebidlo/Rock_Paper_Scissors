@@ -30,6 +30,7 @@ def read_key() -> int:
 
 def main():
     while True:
+        info_window()
         key = read_key()
         if key == 1:
             # clear()
