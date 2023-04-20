@@ -36,6 +36,12 @@ def main():
             # clear()
             schow_key(key)
             print("ok 1")
+        elif key == 2:
+            schow_key(key)
+        elif key == 3:
+            schow_key(key)
+        elif key == 'q':
+            break
         else:
             print("inny")
             # clear()
