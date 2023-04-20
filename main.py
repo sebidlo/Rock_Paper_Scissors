@@ -11,6 +11,14 @@ def clear():
         _ = system('clear')  # for mac and linux(here, os.name is 'posix')
 
 
+def info_window():
+    clear()
+    print("  Gra Kamień, Papier, Nozyce ")
+    print("Co wybierasz?")
+    print("1 - Kamień, 2 - Papier, 3 - Nożyce")
+    print("Twój wybór")
+
+
 def schow_key(key):
     print(f"nacisnieto a ....{key}")
 
