@@ -13,10 +13,10 @@ def clear():
 
 def info_window():
     clear()
-    print("  Gra Kamień, Papier, Nozyce ")
+    print("Gra Kamień, Papier, Nozyce ")
     print("Co wybierasz?")
     print("1 - Kamień, 2 - Papier, 3 - Nożyce")
-    print("Twój wybór")
+    print("Twój wybór : ")
 
 
 def schow_key(key):
