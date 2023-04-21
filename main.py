@@ -40,7 +40,7 @@ def main():
             schow_key(key)
         elif key == 3:
             schow_key(key)
-        elif key == 'q':
+        elif key == ord('q'):  # 'q':
             break
         else:
             print("inny")
