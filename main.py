@@ -32,13 +32,13 @@ def main():
     while True:
         info_window()
         key = read_key()
-        if key == 1:
+        if key == '1':
             # clear()
             schow_key(key)
             print("ok 1")
-        elif key == 2:
+        elif key == '2':
             schow_key(key)
-        elif key == 3:
+        elif key == '3':
             schow_key(key)
         elif key == 'q': # ord('q'):  # 'q':
             break
