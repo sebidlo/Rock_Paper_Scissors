@@ -9,13 +9,20 @@ def clear():
         _ = system('cls')  # for windows
     else:
         _ = system('clear')  # for mac and linux(here, os.name is 'posix')
-
+        
+def show_results():
+    print("Tu bedą wyniki: ...")
+    
+def count_points():
+    print("liczenie wyników")
 
 def info_window():
     clear()
     print("Gra Kamień, Papier, Nozyce ")
     print("Co wybierasz?")
-    print("1 - Kamień, 2 - Papier, 3 - Nożyce")
+    print("1 - Kamień, 2 - Papier, 3 - Nożyce, q - Koniec gry")
+    print("Statystyki:")
+    show_results()
     print("Twój wybór : ")
 
 
