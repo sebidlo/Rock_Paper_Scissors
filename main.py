@@ -23,8 +23,8 @@ def schow_key(key):
     print(f"nacisnieto a ....{key}")
 
 
-def read_key() -> int:
-    key_1 = int(input("wybież wartiant "))
+def read_key(): # -> int:
+    key_1 = input("wybież wartiant ")
     return key_1
 
 
@@ -40,7 +40,7 @@ def main():
             schow_key(key)
         elif key == 3:
             schow_key(key)
-        elif key == ord('q'):  # 'q':
+        elif key == 'q': # ord('q'):  # 'q':
             break
         else:
             print("inny")
