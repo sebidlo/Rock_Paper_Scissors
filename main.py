@@ -44,7 +44,7 @@ def count_points():
 def baner():
     clear()
     print("Gra Kamień, Papier, Nozyce ")
-    if player_onepoints == 0:
+    if player_one_points == 0:
         print("Statystyki:")
         show_results()
     
