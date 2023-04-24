@@ -20,6 +20,20 @@ def clear():
         _ = system('cls')  # for windows
     else:
         _ = system('clear')  # for mac and linux(here, os.name is 'posix')
+
+def set_settings():
+    game_variant = int(input("wybierz wariant gry: "))
+    print(f"wybrany wariant {game_variant}")
+    player_one_name = input("Podaj swoje imię: ")
+    print(f"Witaj {player_one_name}")
+    if game_variant == 1:
+        print("Twoim przeciwnikiem będzie komputer")
+    else:
+        player_second_name = input("podaj imię drugiego graca: ")
+        print(f"Witaj {player_second_name}")
+        print("")
+        print("Zaczynamy !!!")
+        
         
 def show_results():
     print("Tu bedą wyniki: ...")
