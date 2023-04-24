@@ -44,14 +44,14 @@ def count_points():
 def baner():
     clear()
     print("Gra Kamień, Papier, Nozyce ")
-    if player_one_points == 0:
+    if player_one_points != 0:
         print("Statystyki:")
         show_results()
     
     
 def info_window():
     clear()
-    print("Gra Kamień, Papier, Nozyce ")
+    # print("Gra Kamień, Papier, Nozyce ")
     print("Co wybierasz?")
     print("1 - Kamień, 2 - Papier, 3 - Nożyce, q - Koniec gry")
     print("Statystyki:")
@@ -69,7 +69,9 @@ def read_key(): # -> int:
 
 
 def main():
+    set_settings()
     while True:
+        baner()
         info_window()
         key = read_key()
         if key == '1':
