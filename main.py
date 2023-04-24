@@ -15,7 +15,15 @@ def show_results():
     
 def count_points():
     print("liczenie wyników")
-
+    
+def baner():
+    clear()
+    print("Gra Kamień, Papier, Nozyce ")
+    if player_onepoints == 0:
+        print("Statystyki:")
+        show_results()
+    
+    
 def info_window():
     clear()
     print("Gra Kamień, Papier, Nozyce ")
