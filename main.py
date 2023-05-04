@@ -30,10 +30,11 @@ def set_settings():
     baner()
     settings_games['game_variant'] = int(input("wybierz wariant gry: "))
     print(f"wybrany wariant {settings_games['game_variant']}")
-    settings_games['player_second_name'] = input("Podaj swoje imię: ")
-    print(f"Witaj {settings_games['player_second_name']}")
+    settings_games['player_one_name'] = input("Podaj swoje imię: ")
+    print(f"Witaj {settings_games['player_one_name']}")
     if settings_games['game_variant'] == 1:
-        print("Twoim przeciwnikiem będzie komputer")
+        settings_games['player_second_name'] = "Komputer"
+        print(f"Twoim przeciwnikiem będzie {settings_games['player_second_name']}")
         system('pause')
     else:
         settings_games['player_second_name'] = input("podaj imię drugiego graca: ")
