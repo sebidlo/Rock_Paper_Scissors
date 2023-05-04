@@ -26,16 +26,16 @@ def clear():
 
 def set_settings():
     baner()
-    game_variant = int(input("wybierz wariant gry: "))
-    print(f"wybrany wariant {game_variant}")
+    settings_games['game_variant'] = int(input("wybierz wariant gry: "))
+    print(f"wybrany wariant {settings_games['game_variant']}")
     player_one_name = input("Podaj swoje imię: ")
     print(f"Witaj {player_one_name}")
-    if game_variant == 1:
+    if settings_games['game_variant'] == 1:
         print("Twoim przeciwnikiem będzie komputer")
         system('pause')
     else:
-        player_second_name = input("podaj imię drugiego graca: ")
-        print(f"Witaj {player_second_name}")
+        settings_games['player_second_name'] = input("podaj imię drugiego graca: ")
+        print(f"Witaj {settings_games['player_second_name']}")
         print("")
         print("Zaczynamy !!!")
         system('pause')
@@ -50,7 +50,9 @@ def count_points():
 def baner():
     clear()
     print("Gra Kamień, Papier, Nozyce ")
-    if player_one_points != 0:
+    print("Jeśli chcesz garć z kompyterem wciśnij 1, jeśli z innym graczem wciśnij 2")
+    # info_window()
+    if settings_games['player_one_points'] != 0:
         print("Statystyki:")
         show_results()
     
