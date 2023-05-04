@@ -93,11 +93,13 @@ def main():
         if key == '1':
             # clear()
             schow_key(key)
-            print("ok 1")
+            system('pause')
         elif key == '2':
             schow_key(key)
+            system('pause')
         elif key == '3':
             schow_key(key)
+            system('pause')
         elif key == 'q': # ord('q'):  # 'q':
             break
         else:
