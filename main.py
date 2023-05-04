@@ -10,6 +10,7 @@ settings_games = {
 }
 
 '''
+game_variant
 # 1 - jeden gracz przeciwko kompterowi (komputer losuje), 
 # 2 - dwóch graczy (każdy wybiera)
 '''
@@ -23,6 +24,7 @@ def clear():
         _ = system('cls')  # for windows
     else:
         _ = system('clear')  # for mac and linux(here, os.name is 'posix')
+
 
 def set_settings():
     baner()
@@ -47,28 +49,32 @@ def show_results():
 def count_points():
     print("liczenie wyników")
     
-def baner():
+def baner_one():
     clear()
     print("Gra Kamień, Papier, Nozyce ")
-    print("Jeśli chcesz garć z kompyterem wciśnij 1, jeśli z innym graczem wciśnij 2")
-    # info_window()
+    print("")
     if settings_games['player_one_points'] != 0:
         print("Statystyki:")
         show_results()
-    
-    
+
+
+def baner():
+    print("Jeśli chcesz garć z kompyterem wciśnij 1, jeśli z innym graczem wciśnij 2")
+
+
 def info_window():
-    clear()
+    # clear()
     # print("Gra Kamień, Papier, Nozyce ")
     print("Co wybierasz?")
     print("1 - Kamień, 2 - Papier, 3 - Nożyce, q - Koniec gry")
-    print("Statystyki:")
-    show_results()
+    if settings_games['player_one_points'] != 0:
+        # print("Statystyki:")
+        show_results()
     print("Twój wybór : ")
 
 
 def schow_key(key):
-    print(f"nacisnieto a ....{key}")
+    print(f"nacisnieto ....{key}")
 
 
 def read_key(): # -> int:
@@ -77,10 +83,11 @@ def read_key(): # -> int:
 
 
 def main():
-    baner()
+    baner_one()
     set_settings()
+    clear()
     while True:
-        baner()
+        baner_one()
         info_window()
         key = read_key()
         if key == '1':
