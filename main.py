@@ -1,11 +1,14 @@
 from os import system, name
 
-# settings
-player_one_name = ""
-player_second_name = ""
-player_one_points = 0
-player_seconds_points = 0
-game_variant = 0 
+# settings, global data to dictionary
+settings_games = {
+    "player_one_name" : "",
+    "player_second_name" : "",
+    "player_one_points" : 0,
+    "player_seconds_points" : 0,
+    "game_variant" : 0
+}
+
 '''
 # 1 - jeden gracz przeciwko kompterowi (komputer losuje), 
 # 2 - dwóch graczy (każdy wybiera)
