@@ -28,8 +28,8 @@ def set_settings():
     baner()
     settings_games['game_variant'] = int(input("wybierz wariant gry: "))
     print(f"wybrany wariant {settings_games['game_variant']}")
-    player_one_name = input("Podaj swoje imię: ")
-    print(f"Witaj {player_one_name}")
+    settings_games['player_second_name'] = input("Podaj swoje imię: ")
+    print(f"Witaj {settings_games['player_second_name']}")
     if settings_games['game_variant'] == 1:
         print("Twoim przeciwnikiem będzie komputer")
         system('pause')
