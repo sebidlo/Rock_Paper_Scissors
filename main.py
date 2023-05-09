@@ -45,7 +45,9 @@ def set_settings():
         
         
 def show_results():
-    print("Tu bedą wyniki: ...")
+    print("Obecny stan gry:")
+    print(f"Gracz pierwszy: {settings_games['player_one_name']}, punttów: {settings_games['player_one_points']} ")
+    print(f"Gracz drugi: {settings_games['player_second_name']}, punktów: {settings_games['player_seconds_points']} ")
     
 def count_points():
     print("liczenie wyników")
