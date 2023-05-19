@@ -78,6 +78,33 @@ def info_window():
 
 def schow_key(key):
     print(f"nacisnieto ....{key}")
+    
+def count_points(first_player_selection, second_player_selection):
+    if first_player_selection == 1 and second_player_selection == 2:
+        print("Gracz 1 wybrał Kamień, Gracz 2 wybrał Papier - w tej rudzie punkt zdobywa Gracz 2")        
+        settings_games["player_seconds_points"] = settings_games["player_seconds_points"] + 1
+    elif first_player_selection == 1 and second_player_selection == 3:
+        print("Gracz 1 wybrał Kamień, Gracz 2 wybrał Nożyce - w tej rudzie punkt zdobywa Gracz 1")
+        settings_games["player_one_points"] = settings_games["player_one_points"] + 1
+        
+    elif first_player_selection == 2 and second_player_selection == 1:
+        print("Gracz 1 wybrał Papier, Gracz 2 wybrał Kamień - w tej rudzie punkt zdobywa Gracz 1")
+        settings_games["player_one_points"] = settings_games["player_one_points"] + 1
+    elif first_player_selection == 2 and second_player_selection == 3:
+        print("Gracz 1 wybrał Papier, Gracz 2 wybrał Nożyce - w tej rudzie punkt zdobywa Gracz 2")
+        settings_games["player_seconds_points"] = settings_games["player_seconds_points"] + 1
+        
+    elif first_player_selection == 3 and second_player_selection == 2:
+        print("Gracz 1 wybrał Nożyce, Gracz 2 wybrał Papier - w tej rudzie punkt zdobywa Gracz 1")
+        settings_games["player_one_points"] = settings_games["player_one_points"] + 1
+    elif first_player_selection == 3 and second_player_selection == 1:
+        print("Gracz 1 wybrał Nożyce, Gracz 2 wybrał Kamień - w tej rudzie punkt zdobywa Gracz 2")
+        settings_games["player_seconds_points"] = settings_games["player_seconds_points"] + 1
+        
+    else: # first_player_selection == second_player_selection
+        print("W tej rundzie mamy remis")
+        
+
 
 
 def read_key(): # -> int:
@@ -89,6 +116,7 @@ def main():
     baner_one()
     set_settings()
     clear()
+    whose_move = 1 # 1 - palayer one, 2 payer second (computer)
     while True:
         baner_one()
         info_window()
@@ -96,12 +124,19 @@ def main():
         if key == '1':
             # clear()
             schow_key(key)
+            if whose_move == 1 and settings_games["game_variant"] == 1:
+                print("Losowanie")
+            count_points(key)
             system('pause')
         elif key == '2':
-            schow_key(key)
+            if whose_move == 1 and settings_games["game_variant"] == 1:
+                print("Losowanie")
+            count_points(key)
             system('pause')
         elif key == '3':
-            schow_key(key)
+            if whose_move == 1 and settings_games["game_variant"] == 1:
+                print("Losowanie")
+            count_points(key)
             system('pause')
         elif key == 'q': # ord('q'):  # 'q':
             break
