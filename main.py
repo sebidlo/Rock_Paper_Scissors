@@ -1,4 +1,6 @@
+import random
 from os import system, name
+
 
 # settings, global data to dictionary
 settings_games = {
@@ -48,9 +50,16 @@ def show_results():
     print("Obecny stan gry:")
     print(f"Gracz pierwszy: {settings_games['player_one_name']}, punttów: {settings_games['player_one_points']} ")
     print(f"Gracz drugi: {settings_games['player_second_name']}, punktów: {settings_games['player_seconds_points']} ")
-    
+'''    
 def count_points():
     print("liczenie wyników")
+'''
+
+def computer_movement():
+    """Randomly return turn of computer 1, 2, 3."""
+    turn = random.randint(1, 3)
+    return turn
+
     
 def baner_one():
     clear()
