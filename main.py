@@ -79,9 +79,11 @@ def info_window():
     # print("Gra Kamień, Papier, Nozyce ")
     print("Co wybierasz?")
     print("1 - Kamień, 2 - Papier, 3 - Nożyce, q - Koniec gry")
+    '''
     if settings_games['player_one_points'] != 0:
         # print("Statystyki:")
         show_results()
+    '''
     print("Twój wybór : ")
 
 
@@ -127,6 +129,7 @@ def main():
     clear()
     whose_move = 1 # 1 - palayer one, 2 payer second (computer)
     while True:
+        clear()
         baner_one()
         info_window()
         key = read_key()
