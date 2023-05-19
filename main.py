@@ -78,6 +78,33 @@ def info_window():
 
 def schow_key(key):
     print(f"nacisnieto ....{key}")
+    
+def count_points(whose_move, first_player_selection, second_player_selection):
+    if first_player_selection == 1 and second_player_selection == 2:
+        print("Gracz 1 wybrał Kamień, Gracz 2 wybrał Papier - w tej rudzie punkt zdobywa Gracz 2")        
+        settings_games["player_seconds_points"] = settings_games["player_seconds_points"] + 1
+        
+    elif first_player_selection == 1 and second_player_selection == 3:
+        print("Gracz 1 wybrał Kamień, Gracz 2 wybrał Nożyce - w tej rudzie punkt zdobywa Gracz 1")
+        settings_games["player_one_points"] = settings_games["player_one_points"] + 1
+        
+    elif first_player_selection == 2 and second_player_selection == 1:
+        print("Gracz 1 wybrał Papier, Gracz 2 wybrał Kamień - w tej rudzie punkt zdobywa Gracz 1")
+        settings_games["player_one_points"] = settings_games["player_one_points"] + 1
+    elif first_player_selection == 2 and second_player_selection == 3:
+        print("Gracz 1 wybrał Papier, Gracz 2 wybrał Nożyce - w tej rudzie punkt zdobywa Gracz 2")
+        settings_games["player_seconds_points"] = settings_games["player_seconds_points"] + 1
+        
+    elif first_player_selection == 3 and second_player_selection == 2:
+        print("Gracz 1 wybrał Nożyce, Gracz 2 wybrał Papier - w tej rudzie punkt zdobywa Gracz 1")
+        settings_games["player_one_points"] = settings_games["player_one_points"] + 1
+    elif first_player_selection == 3 and second_player_selection == 1:
+        print("Gracz 1 wybrał Nożyce, Gracz 2 wybrał Kamień - w tej rudzie punkt zdobywa Gracz 2")
+        settings_games["player_seconds_points"] = settings_games["player_seconds_points"] + 1
+    else: # first_player_selection == second_player_selection
+        print("W tej rundzie mamu remis")
+    return
+
 
 
 def read_key(): # -> int:
