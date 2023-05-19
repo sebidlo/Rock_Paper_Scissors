@@ -142,14 +142,22 @@ def main():
             show_results()
             system('pause')
         elif key == '2':
+            schow_key(key)
             if whose_move == 1 and settings_games["game_variant"] == 1:
-                print("Losowanie")
-            count_points(key)
+                key_2 = computer_movement()
+                print(f"Losowanie {key_2}")
+                
+            count_points(int(key), key_2)
+            show_results()
             system('pause')
         elif key == '3':
+            schow_key(key)
             if whose_move == 1 and settings_games["game_variant"] == 1:
-                print("Losowanie")
-            count_points(key)
+                key_2 = computer_movement()
+                print(f"Losowanie {key_2}")
+                
+            count_points(int(key), key_2)
+            show_results()
             system('pause')
         elif key == 'q': # ord('q'):  # 'q':
             break
