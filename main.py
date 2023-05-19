@@ -124,12 +124,19 @@ def main():
         if key == '1':
             # clear()
             schow_key(key)
+            if whose_move == 1 and settings_games["game_variant"] == 1:
+                print("Losowanie")
+            count_points(key)
             system('pause')
         elif key == '2':
-            schow_key(key)
+            if whose_move == 1 and settings_games["game_variant"] == 1:
+                print("Losowanie")
+            count_points(key)
             system('pause')
         elif key == '3':
-            schow_key(key)
+            if whose_move == 1 and settings_games["game_variant"] == 1:
+                print("Losowanie")
+            count_points(key)
             system('pause')
         elif key == 'q': # ord('q'):  # 'q':
             break
