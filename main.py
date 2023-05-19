@@ -1,4 +1,6 @@
+import random
 from os import system, name
+
 
 # settings, global data to dictionary
 settings_games = {
@@ -48,9 +50,16 @@ def show_results():
     print("Obecny stan gry:")
     print(f"Gracz pierwszy: {settings_games['player_one_name']}, punttów: {settings_games['player_one_points']} ")
     print(f"Gracz drugi: {settings_games['player_second_name']}, punktów: {settings_games['player_seconds_points']} ")
-    
+'''    
 def count_points():
     print("liczenie wyników")
+'''
+
+def computer_movement():
+    """Randomly return turn of computer 1, 2, 3."""
+    turn = random.randint(1, 3)
+    return turn
+
     
 def baner_one():
     clear()
@@ -121,22 +130,34 @@ def main():
         baner_one()
         info_window()
         key = read_key()
+        key_2 = 0
         if key == '1':
             # clear()
             schow_key(key)
             if whose_move == 1 and settings_games["game_variant"] == 1:
-                print("Losowanie")
-            count_points(key)
+                key_2 = computer_movement()
+                print(f"Losowanie {key_2}")
+                
+            count_points(int(key), key_2)
+            show_results()
             system('pause')
         elif key == '2':
+            schow_key(key)
             if whose_move == 1 and settings_games["game_variant"] == 1:
-                print("Losowanie")
-            count_points(key)
+                key_2 = computer_movement()
+                print(f"Losowanie {key_2}")
+                
+            count_points(int(key), key_2)
+            show_results()
             system('pause')
         elif key == '3':
+            schow_key(key)
             if whose_move == 1 and settings_games["game_variant"] == 1:
-                print("Losowanie")
-            count_points(key)
+                key_2 = computer_movement()
+                print(f"Losowanie {key_2}")
+                
+            count_points(int(key), key_2)
+            show_results()
             system('pause')
         elif key == 'q': # ord('q'):  # 'q':
             break
