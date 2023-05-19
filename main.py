@@ -89,6 +89,7 @@ def main():
     baner_one()
     set_settings()
     clear()
+    whose_move = 1 # 1 - palayer one, 2 payer second (computer)
     while True:
         baner_one()
         info_window()
