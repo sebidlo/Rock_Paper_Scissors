@@ -79,9 +79,11 @@ def info_window():
     # print("Gra Kamień, Papier, Nozyce ")
     print("Co wybierasz?")
     print("1 - Kamień, 2 - Papier, 3 - Nożyce, q - Koniec gry")
+    '''
     if settings_games['player_one_points'] != 0:
         # print("Statystyki:")
         show_results()
+    '''
     print("Twój wybór : ")
 
 
@@ -117,7 +119,7 @@ def count_points(first_player_selection, second_player_selection):
 
 
 def read_key(): # -> int:
-    key_1 = input("wybież wartiant ")
+    key_1 = input("Gracz pierwszy wybiera: ")
     return key_1
 
 
@@ -127,34 +129,35 @@ def main():
     clear()
     whose_move = 1 # 1 - palayer one, 2 payer second (computer)
     while True:
+        clear()
         baner_one()
         info_window()
         key = read_key()
         key_2 = 0
         if key == '1':
             # clear()
-            schow_key(key)
+            # schow_key(key)
             if whose_move == 1 and settings_games["game_variant"] == 1:
                 key_2 = computer_movement()
-                print(f"Losowanie {key_2}")
+                print(f"Komputer wylosował: {key_2}")
                 
             count_points(int(key), key_2)
             show_results()
             system('pause')
         elif key == '2':
-            schow_key(key)
+            # schow_key(key)
             if whose_move == 1 and settings_games["game_variant"] == 1:
                 key_2 = computer_movement()
-                print(f"Losowanie {key_2}")
+                print(f"Komputer wylosował: {key_2}")
                 
             count_points(int(key), key_2)
             show_results()
             system('pause')
         elif key == '3':
-            schow_key(key)
+            # schow_key(key)
             if whose_move == 1 and settings_games["game_variant"] == 1:
                 key_2 = computer_movement()
-                print(f"Losowanie {key_2}")
+                print(f"Komputer wylosował: {key_2}")
                 
             count_points(int(key), key_2)
             show_results()
@@ -162,7 +165,7 @@ def main():
         elif key == 'q': # ord('q'):  # 'q':
             break
         else:
-            print("inny")
+            print("Wciśnij jeden z obsługiwanych klawiszy... ")
             # clear()
 
 
