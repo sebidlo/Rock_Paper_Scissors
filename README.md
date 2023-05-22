@@ -31,4 +31,27 @@ Do zrobienia:
 - [ ] Przekazanie zmiennej określającej drugiego gracza do pęti głównej obsługujacej odczyt wariantów wyboru
 
 
+_<h3> Purpose of the exercise:_
 
+Reinforcement of Punthon's basics:
+* variables,
+* conditional statements,
+* loop,
+* functions,
+* passing parameters to functions,
+* scope of variables
+
+Current status of the project: v.1.0 - Single player vs computer
+
+Task status:
+
+- [x] Definition of global variables => dictionary
+- [x] Main loop reading selected options => while
+- [x] Downloading data from the user, saving it in the dictionary
+- [x] Randomization of computer's answers
+- [x] counting points and writing to the dictionary of global variables
+
+To do:
+- [ ] Download second player data
+- [ ] Added a variable that determines which player chooses
+- [ ] Passing the variable specifying the second player to the main loop that reads the choice variants
