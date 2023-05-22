@@ -17,6 +17,9 @@ Ugruntowanie podstaw Punthon'a:
 
 Obecny stan projektu: v.1.0 - Jeden gracz kontra kompiter
 
+Przebieg gry można zobaczyć tu: https://youtu.be/gR4W_jb33io
+
+
 Status zadań:
 
 - [x] Definicja zmiennych globalnych => słownik
