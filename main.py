@@ -136,7 +136,7 @@ def main():
         key_2 = 0
         if key == '1':
             # clear()
-            schow_key(key)
+            # schow_key(key)
             if whose_move == 1 and settings_games["game_variant"] == 1:
                 key_2 = computer_movement()
                 print(f"Losowanie {key_2}")
@@ -145,7 +145,7 @@ def main():
             show_results()
             system('pause')
         elif key == '2':
-            schow_key(key)
+            # schow_key(key)
             if whose_move == 1 and settings_games["game_variant"] == 1:
                 key_2 = computer_movement()
                 print(f"Losowanie {key_2}")
@@ -154,7 +154,7 @@ def main():
             show_results()
             system('pause')
         elif key == '3':
-            schow_key(key)
+            # schow_key(key)
             if whose_move == 1 and settings_games["game_variant"] == 1:
                 key_2 = computer_movement()
                 print(f"Losowanie {key_2}")
@@ -165,7 +165,7 @@ def main():
         elif key == 'q': # ord('q'):  # 'q':
             break
         else:
-            print("inny")
+            print("Wciśnij jeden z obsługiwanych klawiszy... ")
             # clear()
 
 
