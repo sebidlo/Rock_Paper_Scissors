@@ -119,7 +119,7 @@ def count_points(first_player_selection, second_player_selection):
 
 
 def read_key(): # -> int:
-    key_1 = input("wybież wartiant ")
+    key_1 = input("Gracz pierwszy wybiera: ")
     return key_1
 
 
@@ -139,7 +139,7 @@ def main():
             # schow_key(key)
             if whose_move == 1 and settings_games["game_variant"] == 1:
                 key_2 = computer_movement()
-                print(f"Losowanie {key_2}")
+                print(f"Komputer wylosował: {key_2}")
                 
             count_points(int(key), key_2)
             show_results()
@@ -148,7 +148,7 @@ def main():
             # schow_key(key)
             if whose_move == 1 and settings_games["game_variant"] == 1:
                 key_2 = computer_movement()
-                print(f"Losowanie {key_2}")
+                print(f"Komputer wylosował: {key_2}")
                 
             count_points(int(key), key_2)
             show_results()
@@ -157,7 +157,7 @@ def main():
             # schow_key(key)
             if whose_move == 1 and settings_games["game_variant"] == 1:
                 key_2 = computer_movement()
-                print(f"Losowanie {key_2}")
+                print(f"Komputer wylosował: {key_2}")
                 
             count_points(int(key), key_2)
             show_results()
